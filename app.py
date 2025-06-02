@@ -32,7 +32,7 @@ for x in range(1,4):
     
     while playerOneTurn < 3 and playerTwoTurn < 3 and playerOneGuess != ranNumber and playerTwoGuess != ranNumber:
         if currentPlayer == 1:
-            playerOneGuess = int(st.text_input(playerOneName + ", Guess a number: "))
+            playerOneGuess = st.text_input(playerOneName + ", Guess a number: ")
             if playerOneGuess > ranNumber:
                 st.write_stream("Number is too high")
                 playerOneTurn += 1
@@ -51,7 +51,7 @@ for x in range(1,4):
                 playerOneWins += 1
                 
         if currentPlayer == 2:
-            playerTwoGuess = int(st.text_input(playerTwoName + ", Guess a number: "))
+            playerTwoGuess = st.text_input(playerTwoName + ", Guess a number: ")
             if playerTwoGuess > ranNumber:
                 st.write_stream("Number is too high")
                 st.write_stream("")
