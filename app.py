@@ -6,8 +6,8 @@ st.write("This program gives you three tries to guess a random number. If the nu
 
 st.write("")
 
-playerOneName = st.form_submit_button("Player 1, enter a name: ")
-playerTwoName = st.form_submit_button("Player 2, enter a name: ")
+playerOneName = st.text_input("Player 1, enter a name: ")
+playerTwoName = st.text_input("Player 2, enter a name: ")
 playerOneWins = 0
 playerTwoWins = 0
     
@@ -32,7 +32,7 @@ for x in range(1,4):
     
     while playerOneTurn < 3 and playerTwoTurn < 3 and playerOneGuess != ranNumber and playerTwoGuess != ranNumber:
         if currentPlayer == 1:
-            playerOneGuess = int(st.form_submit_button(playerOneName + ", Guess a number: "))
+            playerOneGuess = int(st.text_input(playerOneName + ", Guess a number: "))
             if playerOneGuess > ranNumber:
                 st.write_stream("Number is too high")
                 playerOneTurn += 1
@@ -51,7 +51,7 @@ for x in range(1,4):
                 playerOneWins += 1
                 
         if currentPlayer == 2:
-            playerTwoGuess = int(st.form_submit_button(playerTwoName + ", Guess a number: "))
+            playerTwoGuess = int(st.text_input(playerTwoName + ", Guess a number: "))
             if playerTwoGuess > ranNumber:
                 st.write_stream("Number is too high")
                 st.write_stream("")
