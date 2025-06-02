@@ -34,57 +34,57 @@ for x in range(1,4):
         if currentPlayer == 1:
             playerOneGuess = st.text_input(playerOneName + ", Guess a number: ")
             if int(playerOneGuess) > int(ranNumber):
-                st.write_stream("Number is too high")
+                st.write("Number is too high")
                 playerOneTurn += 1
-                st.write_stream("")
+                st.write("")
                 if currentPlayer == playerOne:
                     currentPlayer = playerTwo
             elif int(playerOneGuess) < int(ranNumber):
-                st.write_stream("Number is too low")
-                st.write_stream("")
+                st.write("Number is too low")
+                st.write("")
                 playerOneTurn += 1
                 if currentPlayer == playerOne:
                     currentPlayer = playerTwo
             else:
-                st.write_stream("Congrats", playerOneName +", you guessed the number")
+                st.write("Congrats", playerOneName +", you guessed the number")
                 correctGuess = True
                 playerOneWins += 1
                 
         if currentPlayer == 2:
             playerTwoGuess = st.text_input(playerTwoName + ", Guess a number: ")
             if int(playerTwoGuess) > int(ranNumber):
-                st.write_stream("Number is too high")
-                st.write_stream("")
+                st.write("Number is too high")
+                st.write("")
                 playerTwoTurn += 1
                 if currentPlayer == playerTwo:
                     currentPlayer = playerOne
             elif int(playerTwoGuess) < int(ranNumber):
-                st.write_stream("Number is too low")
-                st.write_stream("")
+                st.write("Number is too low")
+                st.write("")
                 playerTwoTurn += 1
                 if currentPlayer == playerTwo:
                     currentPlayer = playerOne
             else:
-                st.write_stream("Congrats", playerTwoName +", you guessed the number")
+                st.write("Congrats", playerTwoName +", you guessed the number")
                 correctGuess = True
                 playerTwoWins += 1
     
     if correctGuess == False:
-        st.write_stream("You both are LOSERS!")
+        st.write("You both are LOSERS!")
 
 # Could add function here, triggers after three rounds of games. results() for example. 
 
 if playerOneWins > playerTwoWins:
-    st.write_stream("")
-    st.write_stream("In total,", playerOneName, "wins! They won the most rounds")
-    st.write_stream("")
+    st.write("")
+    st.write("In total,", playerOneName, "wins! They won the most rounds")
+    st.write("")
 elif playerTwoWins > playerOneWins:
-    st.write_stream("")
-    st.write_stream("In total,", playerTwoName, "wins! They won the most rounds")
-    st.write_stream("")
+    st.write("")
+    st.write("In total,", playerTwoName, "wins! They won the most rounds")
+    st.write("")
 else:
-    st.write_stream("")
-    st.write_stream("In total, players draw!")
-    st.write_stream("")
+    st.write("")
+    st.write("In total, players draw!")
+    st.write("")
 
-st.write_stream("Done")
+st.write("Done")
