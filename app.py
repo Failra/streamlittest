@@ -33,13 +33,13 @@ for x in range(1,4):
     while playerOneTurn < 3 and playerTwoTurn < 3 and playerOneGuess != ranNumber and playerTwoGuess != ranNumber:
         if currentPlayer == 1:
             playerOneGuess = st.text_input(playerOneName + ", Guess a number: ")
-            if playerOneGuess > ranNumber:
+            if int(playerOneGuess) > int(ranNumber):
                 st.write_stream("Number is too high")
                 playerOneTurn += 1
                 st.write_stream("")
                 if currentPlayer == playerOne:
                     currentPlayer = playerTwo
-            elif playerOneGuess < ranNumber:
+            elif int(playerOneGuess) < int(ranNumber):
                 st.write_stream("Number is too low")
                 st.write_stream("")
                 playerOneTurn += 1
@@ -52,13 +52,13 @@ for x in range(1,4):
                 
         if currentPlayer == 2:
             playerTwoGuess = st.text_input(playerTwoName + ", Guess a number: ")
-            if playerTwoGuess > ranNumber:
+            if int(playerTwoGuess) > int(ranNumber):
                 st.write_stream("Number is too high")
                 st.write_stream("")
                 playerTwoTurn += 1
                 if currentPlayer == playerTwo:
                     currentPlayer = playerOne
-            elif playerTwoGuess < ranNumber:
+            elif int(playerTwoGuess) < int(ranNumber):
                 st.write_stream("Number is too low")
                 st.write_stream("")
                 playerTwoTurn += 1
