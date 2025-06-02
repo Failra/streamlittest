@@ -6,8 +6,8 @@ st.write("This program gives you three tries to guess a random number. If the nu
 
 st.write("")
 
-playerOneName = st.text_input("Player 1, enter a name: ")
-playerTwoName = st.text_input("Player 2, enter a name: ")
+playerOneName = st.text_input("Player 1, enter a name: ", key = "1")
+playerTwoName = st.text_input("Player 2, enter a name: ", key = "2")
 playerOneWins = 0
 playerTwoWins = 0
     
